@@ -1,0 +1,29 @@
+<div class="container" *ngIf="product">
+
+  <div class="detail-card">
+
+    <img [src]="product.image" class="detail-img">
+
+    <h2>{{product.name}}</h2>
+
+    <p class="price">{{product.price}} DT</p>
+
+    <p class="stock"
+       [class.in]="product.stock > 0"
+       [class.out]="product.stock == 0">
+       {{ product.stock > 0 ? 'Disponible' : 'Rupture de stock' }}
+    </p>
+
+    <div class="info">
+      <p><strong>ID :</strong> {{product.id}}</p>
+      <p><strong>Stock :</strong> {{product.stock}}</p>
+    </div>
+
+    <div class="actions">
+      <button class="edit" [routerLink]="['/edit-product', product.id]">✏ Modifier</button>
+      <button class="back" routerLink="/products">⬅ Retour</button>
+    </div>
+
+  </div>
+
+</div>

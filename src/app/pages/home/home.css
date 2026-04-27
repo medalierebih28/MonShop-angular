@@ -1,0 +1,98 @@
+.home {
+  font-family: Arial;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #5b3df5, #7c5df9);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-img img {
+  width: 200px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: white;
+  color: #5b3df5;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.big {
+  font-size: 18px;
+}
+
+/* FEATURES */
+.features {
+  padding: 50px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* STEPS */
+.steps {
+  padding: 50px;
+  background: #f5f6fa;
+  text-align: center;
+}
+
+.steps-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: white;
+  padding: 20px;
+  width: 200px;
+  border-radius: 12px;
+}
+
+/* CTA */
+.cta {
+  padding: 50px;
+  text-align: center;
+  background: #5b3df5;
+  color: white;
+}

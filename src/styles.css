@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+}
+
+/* couleurs */
+:root {
+  --primary: #5b3df5;
+  --bg: #f5f6fa;
+}

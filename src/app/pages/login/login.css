@@ -1,0 +1,87 @@
+/* Background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #5b3df5, #7c5df9);
+}
+
+/* Card */
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Title */
+.login-card h2 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #5b3df5;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #5b3df5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #452ed1;
+}
+
+/* Error */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Link */
+.link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.link a {
+  color: #5b3df5;
+  text-decoration: none;
+}

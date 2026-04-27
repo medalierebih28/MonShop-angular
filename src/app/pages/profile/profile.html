@@ -1,0 +1,29 @@
+<div class="profile-container">
+
+  <div class="profile-card">
+
+    <h2>👤 Mon Profil</h2>
+
+    <!-- IMAGE -->
+    <div class="image-section">
+
+      <img 
+        [src]="imageBase64 || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'"
+        class="profile-img">
+
+      <input type="file" (change)="onFileSelected($event)">
+    </div>
+
+    <!-- INFO -->
+    <div class="info">
+      <p><strong>Nom :</strong> {{user.name}}</p>
+      <p><strong>Email :</strong> {{user.email}}</p>
+    </div>
+
+    <!-- BUTTONS -->
+    <button class="save-btn" (click)="saveProfile()">💾 Sauvegarder</button>
+    <button class="logout-btn" (click)="logout()">🚪 Logout</button>
+
+  </div>
+
+</div>

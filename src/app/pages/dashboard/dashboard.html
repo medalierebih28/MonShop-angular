@@ -1,0 +1,65 @@
+<div class="dashboard">
+
+  <!-- HEADER -->
+  <div class="dashboard-header">
+    <h2>Bienvenue 👋</h2>
+    <p>Gérez votre application facilement depuis ce tableau de bord</p>
+  </div>
+
+  <!-- IMAGE -->
+  <div class="hero">
+    <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png">
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+
+    <div class="card">
+      <h3>📦 Produits</h3>
+      <p>{{totalProducts}}</p>
+    </div>
+
+    <div class="card">
+      <h3>🟢 En stock</h3>
+      <p>{{inStock}}</p>
+    </div>
+
+    <div class="card">
+      <h3>🔴 Rupture</h3>
+      <p>{{outStock}}</p>
+    </div>
+
+  </div>
+
+  <!-- MENU -->
+  <div class="menu">
+
+    <div class="menu-card" routerLink="/products">
+      <h3>📦 Produits</h3>
+      <p>Voir tous les produits</p>
+    </div>
+
+    <div class="menu-card" routerLink="/add-product">
+      <h3>➕ Ajouter</h3>
+      <p>Ajouter un nouveau produit</p>
+    </div>
+
+    <div class="menu-card" routerLink="/profile">
+      <h3>👤 Profil</h3>
+      <p>Gérer votre compte</p>
+    </div>
+
+    <div class="menu-card" routerLink="/home">
+      <h3>🏠 Accueil</h3>
+      <p>Retour page d'accueil</p>
+    </div>
+
+  </div>
+
+  <!-- GRAPH -->
+  <div class="chart-section">
+    <h3>📊 Statistiques</h3>
+    <canvas id="myChart"></canvas>
+  </div>
+
+</div>

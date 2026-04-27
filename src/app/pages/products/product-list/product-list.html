@@ -1,0 +1,67 @@
+<div class="container">
+
+    <button routerLink="/dashboard" class="back-btn">
+  ⬅ Retour au Dashboard
+</button>
+
+  <!-- HEADER -->
+  <div class="header-row">
+    <h2>📦 Liste des Produits</h2>
+    <button routerLink="/add-product">+ Ajouter Produit</button>
+  </div>
+
+  <div class="controls">
+
+  <!-- SEARCH -->
+  <input 
+    type="text" 
+    placeholder="🔍 Rechercher produit..." 
+    [(ngModel)]="searchText"
+    (input)="applyFilter()">
+
+  <!-- FILTER -->
+  <select [(ngModel)]="filter" (change)="applyFilter()">
+    <option value="all">Tous</option>
+    <option value="inStock">En stock</option>
+    <option value="outStock">Rupture</option>
+  </select>
+
+</div>
+
+  <!-- GRID -->
+  <div class="grid">
+
+    <div class="card" *ngFor="let p of filteredProducts">
+
+      <!-- IMAGE -->
+      <img *ngIf="p.image" [src]="p.image" class="product-img">
+      <img *ngIf="!p.image" src="https://via.placeholder.com/150" class="product-img">
+
+      <!-- INFO -->
+      <h3>{{p.name}}</h3>
+      <p class="price">{{p.price}} DT</p>
+
+      <!-- STOCK -->
+      <span class="badge"
+            [class.in]="p.stock > 0"
+            [class.out]="p.stock == 0">
+        {{ p.stock > 0 ? 'Disponible' : 'Rupture' }}
+      </span>
+
+      <!-- ACTIONS -->
+      <div class="actions">
+        <button class="delete" (click)="deleteProduct(p.id)">🗑</button>
+        <button class="edit" [routerLink]="['/edit-product', p.id]">✏</button>
+        <button class="detail" [routerLink]="['/product', p.id]">👁</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EMPTY -->
+  <p *ngIf="filteredProducts.length === 0" class="empty">
+    Aucun produit disponible 😕
+  </p>
+
+</div>

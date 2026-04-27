@@ -1,0 +1,37 @@
+<div class="header">
+
+  <!-- Logo -->
+  <div class="logo">
+    🛍️ MyApp
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a routerLink="/dashboard" class="dashboard-btn">🏠 Dashboard</a>
+
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+
+    <a *ngIf="auth.isLoggedIn()" routerLink="/dashboard" routerLinkActive="active">
+      Dashboard
+    </a>
+
+    <a *ngIf="auth.isLoggedIn()" routerLink="/products" routerLinkActive="active">
+      Produits
+    </a>
+
+    <a *ngIf="auth.isLoggedIn()" routerLink="/profile" routerLinkActive="active">
+      Profile
+    </a>
+
+    <!-- Si NON connecté -->
+    <a *ngIf="!auth.isLoggedIn()" routerLink="/login">Login</a>
+    <a *ngIf="!auth.isLoggedIn()" routerLink="/signup">Signup</a>
+
+    <!-- Logout -->
+    <button *ngIf="auth.isLoggedIn()" (click)="logout()">
+      Logout
+    </button>
+
+  </nav>
+
+</div>
